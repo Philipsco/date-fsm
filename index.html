@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Would you like to go out with me for a date? 🥹</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Philscoidn"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="description" content="Would you like to go out with me for a date"/>
+    <meta name="keywords" content="Would you like to go out with me for a date"/>
+    <link rel="stylesheet" href="./style.css">
+    <!-- icons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="image/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="image/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="image/icons/favicon-192x192.png">
+    <link rel="shortcut icon" type="image/x-icon" href="image/icons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="image/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <link rel="manifest" href="image/icons/manifest.json">
+  </head>
+  <body>
+        <div id="ask" class="container">
+            <div >
+                <h1 class = "header_text">Would you like to go out with me for a date siska? :)</h1>
+            </div>
+            <div class="gif_container">
+                <img src="image/ask.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id= "noButton" onclick="sadButton()">No</button>
+            </div>
+            <video id="novideo" width="0" height="0" controls>
+                <source src="image/SadMoment.mp4" 
+                   type="video/mp4">
+            </video>
+        </div>
+        <div id="ans" class="container">
+            <div >
+                <h1 class = "header_text">Yeeeaaayyyy Thankyou Sayang!!</h1>
+            </div>
+			<div class="gif_container">
+                <img src="https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class="event-grid">
+                <div class="event-item">
+                    <img src="image/badmin.jpeg" alt="Kegiatan 1" class="event-img">
+                    <h2>Badminton Date</h2>
+                    <a href="https://maps.app.goo.gl/Hv4SmiaJisubWaNB9">Lapangan Badminton</a>
+                    <span>07:00 - 08:00</span>
+                </div>
+                <div class="event-item">
+                    <img src="image/etive.jpg" alt="Kegiatan 2" class="event-img">
+                    <h2>Studio Date</h2>
+                    <a href="https://maps.app.goo.gl/HC73HuHGXYTjgicU9">Etive Studio</a>
+                    <span>10:00 - 12:00</span>
+                </div>
+                <div class="event-item">
+                    <img src="image/board.JPG" alt="Kegiatan 3" class="event-img">
+                    <h2>Board Game Date</h2>
+                    <a href="https://maps.app.goo.gl/b1euRFZiboq7LxaCA">The Vault Board Game Cafe</a>
+                    <span>12:30 - 15:00</span>
+                </div>
+                <div class="event-item">
+                    <img src="image/pantai.jpg" alt="Kegiatan 4" class="event-img">
+                    <h2>Beach Date</h2>
+                    <a href="https://maps.app.goo.gl/57iQ3uqaPJorhrZg7">Pantai Maju</a>
+                    <span>16:00 - Selesai</span>
+                </div>
+            </div>
+            <div class="gif_container">
+                <img src="image/ans.gif" alt="Cute animated illustration">
+            </div>
+            <video id="ansvideo" width="0" height="0" controls>
+                <source src="image/KidsCheering.mp4" 
+                   type="video/mp4">
+            </video>
+        </div>
+    </body> 
+    <script>
+        function playAudio()
+        {
+            document.getElementById('novideo').play();
+        }
+
+        function nextPage() {
+            //window.location.href = "yes.html";
+            document.getElementById('ans').style.display = 'block';
+            document.getElementById('ask').style.display = 'none';
+            document.getElementById('novideo').pause();
+            document.getElementById('ansvideo').play();
+        }
+
+        function sadButton() {
+            // var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            // var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            // document.getElementById('noButton').style.left = `${x}px`;
+            // document.getElementById('noButton').style.top = `${y}px`;
+            playAudio();
+        }
+
+    </script> 
+</html>
